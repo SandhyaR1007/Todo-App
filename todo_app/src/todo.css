@@ -1,0 +1,13 @@
+.todo{
+    background-color: aquamarine;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+.list-item{
+    list-style: none;
+}
