@@ -3,17 +3,24 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    height: 100vh;
+    /* border: 1px solid black; */
    
+   
+}
+.heading{
+    margin-top: 0;
+    padding: 1rem;
 }
 .main-form{
     width: 30%;
     margin: auto;
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     padding: 0.3rem;
 }
 .input-area{
     width: 70%;
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
 
 }
 .input-area:focus{
@@ -21,10 +28,29 @@
     
 }
 .add-btn{
-    width: 20%;
-    padding: 0.3rem;
-}
-.todo-list{
-    padding: 0;    
+    width: 7rem;
+    margin:0.1rem 0.2rem;
+    cursor: pointer;
     
+}
+.todo-list-display-hor{
+    display: flex;
+    flex-direction: row;
+    padding: 0;  
+    width:15rem;  
+   
+    
+}
+.todo-list-display-ver{
+    display: flex;
+    flex-direction: column;
+    padding: 0;     
+    
+}
+.display-area{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
 }

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Todo from "./Todo";
 import db from "./firebase";
 import firebase from "firebase";
+import { Button,TextField } from '@material-ui/core';
+
 
 function App() {
   const [todos,setTodos]=useState([]);
@@ -27,19 +29,23 @@ function App() {
   ,[])
   return (
     <div className="App">
-      <h1>TODO APP</h1>
-      <form className="main-form">
-      <input value={input} onChange={event=>setInput(event.target.value)} className="input-area"/>
-      <button type="submit" onClick={addItem} disabled={!input} className="add-btn">Add Item</button>
-      </form>
+      <h1 className="heading">TODO APP</h1>
       
-      <ul className="todo-list">
+      <form className="main-form" noValidate autoComplete="off">
+      <TextField className="input-area" id="standard-basic" label="Enter todo"  value={input} onChange={event=>setInput(event.target.value)} />
+      {/* <input value={input} onChange={event=>setInput(event.target.value)} className="input-area"/> */}
+      {/* <button type="submit" onClick={addItem} disabled={!input} className="add-btn">Add Item</button> */}
+      <Button type="submit" onClick={addItem} disabled={!input} className="add-btn" color="primary" variant="contained" size="medium">Add Item</Button>
+      </form>
+      <div className="display-area">
+      <ul className="todo-list-display-ver">
         {
           todos.map(todo=>(
            <Todo todo={todo}/>
           ))
         }
       </ul>
+      </div>
      
       
     </div>

@@ -2,12 +2,33 @@
     background-color: aquamarine;
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0.5rem;
-    width: 30%;
-    margin: auto;
+    width: 27rem;
+    margin: 0.3rem auto;
     text-align: center;
+    border:1px solid black;
+    border-radius: 0.5rem;
+    
 }
 .list-item{
     list-style: none;
+    margin:0.2rem 0.3rem;
+    /* background-color: palevioletred; */
+    padding: 0.3rem 0.6rem;
+}
+.completed{
+    text-decoration: line-through;
+    color:grey;
+}
+
+.btn{
+    cursor: pointer;
+    margin:0.3rem;
+}
+.hideModal{
+    display: none;
+}
+.displayModal{
+    display:inline-block;
 }
