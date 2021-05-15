@@ -9,6 +9,9 @@ import { Button,TextField } from '@material-ui/core';
 function App() {
   const [todos,setTodos]=useState([]);
   const [input,setInput] = useState("");
+  let week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+  const date = new Date();
+  const day = week[date.getDay()];
   const addItem = (event)=>{
     event.preventDefault();
     // setTodos([...todos,input])
@@ -29,22 +32,25 @@ function App() {
   ,[])
   return (
     <div className="App">
-      <h1 className="heading">TODO APP</h1>
+      <h1 className="heading">{day}</h1>
+      <p className="date">{date.getUTCDate()}/{date.getUTCMonth()}/{date.getUTCFullYear()}</p>
+      <div className="card">
       
       <form className="main-form" noValidate autoComplete="off">
-      <TextField className="input-area" id="standard-basic" label="Enter todo"  value={input} onChange={event=>setInput(event.target.value)} />
+      <TextField className="input-area" id="standard-basic" label="Enter to-do"  value={input} onChange={event=>setInput(event.target.value)} />
       {/* <input value={input} onChange={event=>setInput(event.target.value)} className="input-area"/> */}
       {/* <button type="submit" onClick={addItem} disabled={!input} className="add-btn">Add Item</button> */}
-      <Button type="submit" onClick={addItem} disabled={!input} className="add-btn" color="primary" variant="contained" size="medium">Add Item</Button>
+      <Button type="submit" onClick={addItem} disabled={!input} className="add-btn" color="primary" variant="contained" size="medium">Add to-do</Button>
       </form>
       <div className="display-area">
-      <ul className="todo-list-display-ver">
+      <ul className="todo-list-display">
         {
           todos.map(todo=>(
            <Todo todo={todo}/>
           ))
         }
       </ul>
+      </div>
       </div>
      
       

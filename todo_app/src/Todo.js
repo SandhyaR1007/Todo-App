@@ -6,6 +6,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import DoneIcon from '@material-ui/icons/Done';
 
 
+
 function Todo(props) {
     const [isComplete,setComplete] = useState(false)
     const [toggle,setToggle] = useState(true)
@@ -38,7 +39,7 @@ function Todo(props) {
                 :
                 (<>
                 <form onSubmit={submitHandler}>
-                <input type="text" value={text} onChange={handleChange}  />
+                <input type="text" value={text} onChange={handleChange} className="edit-input" />
                 </form>
                 
                 </>)
