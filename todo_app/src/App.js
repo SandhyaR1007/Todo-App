@@ -6,6 +6,7 @@ import firebase from "firebase";
 import { Button,TextField } from '@material-ui/core';
 
 
+
 function App() {
   const [todos,setTodos]=useState([]);
   const [input,setInput] = useState("");
@@ -32,15 +33,19 @@ function App() {
   ,[])
   return (
     <div className="App">
+      <nav className="navbar">
       <h1 className="heading">{day}</h1>
-      <p className="date">{date.getUTCDate()}/{date.getUTCMonth()}/{date.getUTCFullYear()}</p>
+      {/* <h3 className="date">{date.getUTCDate()}/{date.getUTCMonth()}/{date.getUTCFullYear()}</h3> */}
+
+      </nav>
+      
       <div className="card">
       
       <form className="main-form" noValidate autoComplete="off">
       <TextField className="input-area" id="standard-basic" label="Enter to-do"  value={input} onChange={event=>setInput(event.target.value)} />
       {/* <input value={input} onChange={event=>setInput(event.target.value)} className="input-area"/> */}
       {/* <button type="submit" onClick={addItem} disabled={!input} className="add-btn">Add Item</button> */}
-      <Button type="submit" onClick={addItem} disabled={!input} className="add-btn" color="primary" variant="contained" size="medium">Add to-do</Button>
+      <button type="submit" onClick={addItem} disabled={!input} className="add-btn" color="primary" variant="contained" size="medium">+</button>
       </form>
       <div className="display-area">
       <ul className="todo-list-display">

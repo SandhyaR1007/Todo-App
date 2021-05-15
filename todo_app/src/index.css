@@ -10,11 +10,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  
- background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+ /* background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4); */
  
  
- background: linear-gradient(to right, #1c92d2, #f2fcfe);
+ /* background: linear-gradient(to right, #1c92d2, #f2fcfe); */
  /* background: linear-gradient(to right, #fc5c7d, #6a82fb); */
+ /* background: linear-gradient(110deg, #fdcd3b 80%, #ffed4b 60%);
+ background: linear-gradient(110deg,#5a6fd6  60%, #fc5c7d 60%); */
+ background: #a8c0ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, rgba(63, 43, 150,0.7), #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+ 
  
  
 background-size: cover;
